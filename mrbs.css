@@ -1,0 +1,175 @@
+BODY {color:black; font-size: 10pt; font-family:arial,sans-serif;
+background-color:#ffffed}
+
+A:link {color:#5B69A6; font-weight: bold; text-decoration: none}
+A:visited {color:#5B69A6; font-weight: bold; text-decoration: none}
+A:hover {color:red; text-decoration:underline}
+H1 {color:black; font-family:verdana,sans-serif; font-size:16pt}
+H2 {color:black; font-family:verdana,sans-serif; font-size:14pt}
+H3 {font-family:verdana,sans-serif}
+
+TD {font-size:10pt; font-family:arial,sans-serif; border-width:1;
+vertical-align:top}
+TD.header {color:black; font-family:verdana,sans-serif; border-width:0;
+background-color:#ffffdd; font-size:26pt}
+TD.CR { vertical-align: middle; text-align: right}
+TD.CL { vertical-align: middle; text-align: left}
+TD.BR { vertical-align: baseline; text-align: right}
+TD.BL { vertical-align: baseline; text-align: left}
+TD.TR { vertical-align: top; text-align: right}
+TD.TL { vertical-align: top; text-align: left}
+
+td form { margin:0; } // Prevent IE from displaying margins around forms in tables.
+
+TD.unallocated {color:gray}
+TD.allocated {color:black}
+A:link.unallocated {color:#9BA9E6}
+A:link.allocated {color:#5B69A6}
+
+A:hover.unallocated {color:red}
+A:hover.allocated {color:red}
+
+A.blue {color:blue}
+A:visited.blue {color:blue}
+A:hover.blue {color:red}
+
+TH {color:#eeeeee; font-size:10pt; font-family:verdana,sans-serif;
+background-color:#999999;
+border-width:1; border-color:#999999; vertical-align:top}
+TD.banner {vertical-align:middle; background-color:#C0E0FF}
+
+TD.blue {background-color:#F0F0FF}
+TD.red  {background-color:#FFF0F0}
+TD.green {background-color:#DDFFDD}
+
+/*
+TD.0 {background-color:#DDFFDD}
+TD.1 {background-color:#CC99FF}
+TD.2 {background-color:#99CC00}
+TD.3 {background-color:#FF6600}
+TD.4 {background-color:#00CC99}
+TD.5 {background-color:#FF99CC}
+TD.6 {background-color:#66FFFF}
+TD.7 {background-color:#FFCC99}
+TD.8 {background-color:#FF6666}
+TD.9 {background-color:#FF9999}
+TD.10 {background-color:#FFFF99}
+TD.11 {background-color:#C0E0FF}
+TD.12 {background-color:#FF99FF}
+TD.13 {background-color:#CCCC00}
+TD.14 {background-color:#CCCCFF}
+TD.15 {background-color:#FFCC66}
+TD.16 {background-color:#CCCCCC}
+TD.17 {background-color:#FF3399}
+TD.18 {background-color:#FFBB99}
+TD.19 {background-color:#BB3399}
+TD.20 {background-color:#58FA82}
+
+
+TD.AEC-YJDP {background-color:#DDFFDD; text-align:center}
+TD.CIE-HKCC {background-color:#CC99FF; text-align:center}
+TD.CIE-PAS {background-color:#99CC00; text-align:center}
+TD.CIE-UGS {background-color:#FF6600; text-align:center}
+TD.DHSS {background-color:#00CC99; text-align:center}
+TD.DLC-CC {background-color:#FF99CC; text-align:center}
+TD.DLC-CL {background-color:#66FFFF; text-align:center}
+TD.DAT-TP {background-color:#FFCC99; text-align:center}
+TD.DMGS-YJDF {background-color:#FF6666; text-align:center}
+TD.DMGS-SM {background-color:#FF9999; text-align:center}
+TD.DMGS-AL {background-color:#FFFF99; text-align:center}
+TD.SVT-ERB {background-color:#C0E0FF; text-align:center}
+TD.DAT-CAD {background-color:#FF99FF; text-align:center}
+TD.DAT-CIT {background-color:#CCCC00; text-align:center}
+TD.DB-ALP {background-color:#CCCCFF; text-align:center}
+TD.DB-BSP {background-color:#FFCC66; text-align:center}
+TD.DB-THP {background-color:#CCCCCC; text-align:center}
+TD.DSDA {background-color:#FF3399; text-align:center}
+TD.SE {background-color:#FFBB99; text-align:center}
+TD.OTHER {background-color:#BB3399; text-align:center}
+TD.DSS {background-color:#58FA82; text-align:center}
+*/
+
+.canlendar_day tbody tr td{
+	text-align:center;
+}
+
+.canlendar_day tbody tr td:first-child a{
+	color:#5b69a6;
+}
+
+.canlendar_day tbody tr td a{
+	color:#000000;
+}
+
+TD.white {background-color:#FFFFFF}
+
+TD.calendar { border:0px; font-size: 8pt}
+TD.calendarHeader {border:0px; font-size: 10pt}
+FONT.calendarHighlight {color: red}
+
+TD.even_row {background-color:#FFFFFF}	/* Even rows in the day view */
+TD.odd_row {background-color:#EEEEEE}	/* Odd rows in the day view */
+
+TD.highlight {background-color:#AABBFF; border-style:solid; border-width:1; border-color:#0000AA;} /* The highlighted cell under the cursor */
+.naked { margin: 0; padding: 0; border-width:0} /* Invisible tables used for internal needs */
+
+.sitename
+{font-size: 18px;
+font-style: normal;
+font-weight: bold;
+text-transform: none;
+color:#ffffff;
+position: absolute;
+left:30;
+top:12}
+
+TD.month {font-size: 8pt; background-color:#FFFFFF}
+.monthday {font-size: 12pt; vertical-align: top; text-align: left}
+
+.tbl_report7{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+.tbl_report7 tr, .tbl_report7 td{
+	margin:0;
+	padding:0;
+}
+.tbl_report7 td{
+	padding:2px;
+	border:1px solid #000;
+	text-align:center;
+	min-width:80px;
+}
+
+.tbl_report7 td.time-slot{
+	min-width:25px;
+}
+
+.tbl_report7 tr td:first-child{
+	min-width:125px;
+}
+
+.tbl_report7 .title{
+	zbackground: #E8E8E8;
+}
+
+.tbl_report7 .month{
+	font-weight:bold;
+}
+
+
+.rate_col td{
+	background:#D8E4BC;
+}
+
+.tbl_report7 p{
+	zmargin:0;
+}
+
+.tbl_report7 th{
+	border:1px solid #000;
+	background: none;
+	color:#000;
+	font-weight:bold;
+}
