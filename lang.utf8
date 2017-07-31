@@ -14,7 +14,12 @@
 $vocab["charset"]            = "UTF-8";
 
 # Used in style.inc
-$vocab["mrbs"]               = "課室預約系統(2016-2017)";
+if ($db_host == '192.168.0.192'){
+	$vocab["mrbs"]               = "課室預約系統(2017-2018)";
+}else{
+	$vocab["mrbs"]               = "課室預約系統(2017-2018) - 測試系統";
+}
+
 
 # Used in functions.inc
 $vocab["report"]             = "報表";
@@ -80,7 +85,7 @@ $vocab["DDTB-ALP"]		     = "會計學課程";
 $vocab["DDTB-BSP"]		     = "商業學課程";
 $vocab["DTH"]		         = "旅遊及款待課程";
 $vocab["DSD"]		     	 = "學生發展部";
-$vocab["SLP"]		         = "服務學習計劃";
+$vocab["OFP"]		         = "項目辦事處";
 $vocab["SE"]		     	 = "學生企業";
 $vocab["OTHER"]		     	 = "其他";
 $vocab["_1"]		    	 = "";

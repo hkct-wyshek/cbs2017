@@ -521,22 +521,22 @@ function tdcell($colclass)
 	 
 	  $ecolors["0"] = "#ff9999";
 		$ecolors["1"] = "#99ffcc";
-		$ecolors["2"] = "#b3ffff";
-		$ecolors["3"] = "#99b3ff";
-		$ecolors["4"] = "#ffff99";
-		$ecolors["5"] = "#ffccff";
-		$ecolors["6"] = "#ff80ff";
-		$ecolors["7"] = "#ff4dc4";
-		$ecolors["8"] = "#cc99ff";
-		$ecolors["9"] = "#cc66ff";
-		$ecolors["10"] = "#b366ff";
+		$ecolors["2"] = "#ffccff";
+		$ecolors["3"] = "#ff80d5";
+		$ecolors["4"] = "#80b3ff";
+		$ecolors["5"] = "#cce4ff";
+		$ecolors["6"] = "#ffff99";
+		$ecolors["7"] = "#8080ff";
+		$ecolors["8"] = "#dab3ff";
+		$ecolors["9"] = "#b380ff";
+		$ecolors["10"] = "#d966ff";
 		$ecolors["11"] = "#c68c53";
 		$ecolors["12"] = "#ccff99";
 		$ecolors["13"] = "#84e184";
 		$ecolors["14"] = "#66cc99";
-		$ecolors["15"] = "#ff9966";
-		$ecolors["16"] = "#ff4d4d";
-		$ecolors["17"] = "#ff704d";
+		$ecolors["15"] = "#ffbf80";
+		$ecolors["16"] = "#ff9933";
+		$ecolors["17"] = "#ff4d4d";
 		$ecolors["18"] = "#d9d9d9";
 		
 	  
@@ -546,22 +546,22 @@ function tdcell($colclass)
 
 		$ecolors["AEC-YJDPT"] = "#ff9999";
 		$ecolors["CIE"] = "#99ffcc";
-		$ecolors["DHSS"] = "#b3ffff";
-		$ecolors["DSS"] = "#99b3ff";
-		$ecolors["DLGS-CL"] = "#ffff99";
-		$ecolors["DLGS-YJD"] = "#ffccff";
-		$ecolors["DSF"] = "#ff80ff";
-		$ecolors["DLGS-AL"] = "#ff4dc4";
-		$ecolors["DDTB-CIT"] = "#cc99ff";
-		$ecolors["DDTB-TP"] = "#cc66ff";
-		$ecolors["DDTB-CAD"] = "#b366ff";
+		$ecolors["DHSS"] = "#ffccff";
+		$ecolors["DSS"] = "#ff80d5";
+		$ecolors["DLGS-CL"] = "#80b3ff";
+		$ecolors["DLGS-YJD"] = "#cce4ff";
+		$ecolors["DSF"] = "#ffff99";
+		$ecolors["DLGS-AL"] = "#8080ff";
+		$ecolors["DDTB-CIT"] = "#dab3ff";
+		$ecolors["DDTB-TP"] = "#b380ff";
+		$ecolors["DDTB-CAD"] = "#d966ff";
 		$ecolors["SVT-ERB"] = "#c68c53";
 		$ecolors["DDTB-ALP"] = "#ccff99";
 		$ecolors["DDTB-BSP"] = "#84e184";
 		$ecolors["DTH"] = "#66cc99";
-		$ecolors["DSD"] = "#ff9966";
-		$ecolors["SLP"] = "#ff4d4d";
-		$ecolors["SE"] = "#ff704d";
+		$ecolors["DSD"] = "#ffbf80";
+		$ecolors["OFP"] = "#ff9933";
+		$ecolors["SE"] = "#ff4d4d";
 		$ecolors["OTHER"] = "#d9d9d9";
 		  
 	  
