@@ -20,7 +20,11 @@ $dbsys = "mysql";
 $db_host = "localhost";
 #$db_host = "127.0.0.1";
 # Database name:
-$db_database = "classrm2017";
+if ($db_host == "192.168.9.204"){
+	$db_database = "classrm2017uat";
+}else{
+	$db_database = "classrm2017";
+}
 # Database login user name:
 $db_login = "root";
 # Database login password:
@@ -555,6 +559,8 @@ $cpname = array(
 				7 => array('code'=>'YL',    'name'=>'元朗教學中心'),
 				8 => array('code'=>'CSW',   'name'=>'長沙灣培訓中心'),
 				9=> array('code'=>'AUS',   'name'=>'柯士甸道教學中心'),
+				10=> array('code'=>'HMT',   'name'=>'何文田(勞校)')
+		
 );
 
 ##########################################

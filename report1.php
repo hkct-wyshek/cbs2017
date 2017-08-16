@@ -58,11 +58,11 @@ print_header($day, $month, $year, $area);
   <table width="400" border="0" cellpadding="5">
     <tr>
       <td width="83">查詢日期由</td>
-      <td width="301"><input type="text" name="dfrom" value="2015-09-01">&nbsp;(YYYY-MM-DD)</td>
+      <td width="301"><input type="text" name="dfrom" value="2017-09-01">&nbsp;(YYYY-MM-DD)</td>
     </tr>
     <tr>
       <td>查詢日期至</td>
-      <td><input type="text" name="dto" value="2016-09-30">&nbsp;(YYYY-MM-DD)</td>
+      <td><input type="text" name="dto" value="2018-09-30">&nbsp;(YYYY-MM-DD)</td>
     </tr>
   </table>
   <br>

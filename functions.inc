@@ -725,4 +725,18 @@ function check_date_format($date){
         return false;
     }
 }
+
+function check_date_format_2($date){
+	if (preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])$/",$date)){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+function print_array($ary){
+	echo "<pre>";
+	var_dump($ary);
+	echo "</pre>";
+}
 ?>
