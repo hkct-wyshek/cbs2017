@@ -550,17 +550,16 @@ $cunitname[18] = get_vocab($cunit[18]);
 
 $cpname = array(
 				0 => array('code'=>'HMTSB', 'name'=>'何文田校舍'),
-				1 => array('code'=>'MOS',   'name'=>'馬鞍山校舍(MOS)'),
-				2 => array('code'=>'MUC',   'name'=>'馬鞍山本科校園(MUC)'),
-				3 => array('code'=>'JDN',   'name'=>'佐敦培訓中心'),
-				4 => array('code'=>'OPC',   'name'=>'開源道培訓中心'),
-				5 => array('code'=>'PLS',   'name'=>'砵蘭街培訓中心'),
-				6 => array('code'=>'TKO',   'name'=>'將軍澳培訓中心'),
-				7 => array('code'=>'YL',    'name'=>'元朗教學中心'),
-				8 => array('code'=>'CSW',   'name'=>'長沙灣培訓中心'),
-				9=> array('code'=>'AUS',   'name'=>'柯士甸道教學中心'),
-				10=> array('code'=>'HMT',   'name'=>'何文田(勞校)')
-		
+				1=> array('code'=>'HMT',   'name'=>'何文田(勞校)'),
+				2 => array('code'=>'MOS',   'name'=>'馬鞍山校舍(MOS)'),
+				3 => array('code'=>'MUC',   'name'=>'馬鞍山本科校園(MUC)'),
+				4 => array('code'=>'JDN',   'name'=>'佐敦培訓中心'),
+				5 => array('code'=>'OPC',   'name'=>'開源道培訓中心'),
+				6 => array('code'=>'PLS',   'name'=>'砵蘭街培訓中心'),
+				7 => array('code'=>'TKO',   'name'=>'將軍澳培訓中心'),
+				8 => array('code'=>'YL',    'name'=>'元朗教學中心'),
+				9 => array('code'=>'CSW',   'name'=>'長沙灣培訓中心'),
+				10=> array('code'=>'AUS',   'name'=>'柯士甸道教學中心'),		
 );
 
 ##########################################
