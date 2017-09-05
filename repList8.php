@@ -229,7 +229,7 @@ function get_loc_shift_val($loc_id, $section, $dd){
 			$tmp['starttime'] = date('H:i',$row[1]);
 			$tmp['endtime'] = date('H:i',$row[2]);
 			$tmp['duration'] = date('H',$row[2]) - date('H',$row[1]);
-			$tmp['name'] = ($row[4] == $row[0] ? $row[0]."(".$tmp['starttime']."-".$tmp['endtime'].")": "[" . $row[4] . "] " . $row[0]."(".$tmp['starttime']."-".$tmp['endtime'].")");
+			$tmp['name'] = ($row[4] == $row[0] ? $row[0]." (".$tmp['starttime']."-".$tmp['endtime'].")": "[" . $row[4] . "] " . $row[0]." (".$tmp['starttime']."-".$tmp['endtime'].")");
 			$tmp['isUsedRoom'] = $row[3];
 			$tmp['type'] = $row[4];
 		}
@@ -249,9 +249,7 @@ function addTBLCell($loc_data, $isSatorSun, $NightClass, $course_colspan){
 		$course_colspan = $course_colspan;
 	}
 	
-	//if ($course_colspan > 4) $course_colspan = 4;
-		
-	
+	//if ($course_colspan > 4) $course_colspan = 4;	
 	return "<td colspan=\"$course_colspan\" style=\"$bgcolor\">".$loc_data["name"]. "</td>";
 }
 
@@ -383,7 +381,7 @@ if (! $res) fatal_error(0, sql_error());
 		if ((($mode == 'day') && ($weekday != 0 && $weekday != 6))){
 			cellValue($objSheet, date('d', $strotimeDate)."(".date('D', $strotimeDate).")", getNameFromNumber(++$col1).($row1), "", false, true, false);
 		}			
-		if ($mode == 'night'){
+		if ($mode == 'night' || $mode == 'all'){
 			cellValue($objSheet, date('d', $strotimeDate)."(".date('D', $strotimeDate).")", getNameFromNumber(++$col1).($row1), "", false, true, false);			
 		}
 		$date = date ("Y-m-d", strtotime("+1 day", $strotimeDate));
@@ -405,8 +403,8 @@ if (! $res) fatal_error(0, sql_error());
 	$col1++;
 	$fullTime_str = array('早', '早', '午', '午');
 	$partTime_str = array('早', '早', '午', '午', '晚');
-	if ($mode == 'night'){$shift_str = $partTime_str; }
-	if ($mode == 'day' || $mode == 'all'){$shift_str = $fullTime_str; }
+	if ($mode == 'night' || $mode == 'all'){$shift_str = $partTime_str; }
+	if ($mode == 'day'){$shift_str = $fullTime_str; }
 	//$shift_str = array('早', '早', '午', '午', '晚');
 	$total_column = 1;
 	$unit_col = 2;
@@ -428,7 +426,7 @@ if (! $res) fatal_error(0, sql_error());
 			$DateIsMerge = false;
 			
 			if ((($weekday == 0 || $weekday == 6) && $mode == 'night') ||
-					($mode == 'day' && ($weekday != 0 && $weekday != 6))){
+					($mode == 'day' && ($weekday != 0 && $weekday != 6)) || ($mode == 'all')){
 				
 				$toDate = getNameFromNumber($start_col + count($shift_str)-1).($row1);
 				$DateIsMerge = true;
@@ -463,7 +461,7 @@ if (! $res) fatal_error(0, sql_error());
 			foreach($data_ary as $key => $loc){
 				$row1++;
 				if ((($weekday == 0 || $weekday == 6) && $mode == 'night') ||
-						(($mode == 'day') && ($weekday != 0 && $weekday != 6))){
+						(($mode == 'day') && ($weekday != 0 && $weekday != 6)) || ($mode == 'all')){
 							
 							$i = 0;
 							$bgcolor = "";
@@ -502,6 +500,15 @@ if (! $res) fatal_error(0, sql_error());
 								}	
 								if($tblAddColNum > 1){
 									$i += $tblAddColNum;
+
+									$check_data = get_loc_shift_val($loc['id'], ($i - 1), $currDate);
+									
+									if ($check_data["name"] != ''){
+										$i--;
+										$tblAddColNum--;
+										$addColNum--;
+									}
+									
 									$isMerge = true;
 								}else{
 									$i++;

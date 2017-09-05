@@ -36,7 +36,8 @@ print_header($day, $month, $year, $area);
 if (getUserLevel($user) >= 1.9) {
 ?>
   <li><font size=4><A href="report1.php">實際及預算校舍使用率</A></font></li>
-  <li><font size=4><A href="report7.php">課室使用率報告</A></font></li><br><br>
+  <li><font size=4><A href="report7.php">課室使用率報告</A></font></li>
+  <li><font size=4><A href="report8.php">兼讀/短期課程每月課室使用狀況</A></font></li><br><br>
   <li><font size=4><A href="report3.php">每日課室表</A></font></li>
   <li><font size=4><A href="report5.php">日間課程每週課室表</A></font></li>
   <li><font size=4><A href="report6.php">兼讀/短期課程每週課室表</A></font></li>
