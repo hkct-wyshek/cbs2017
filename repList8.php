@@ -167,7 +167,7 @@ function cellValueForRichText($sheet, $str, $from, $to, $isMerge, $isCenter, $is
 function get_section_code($val){
 	
 	$dd = date('Y-m-d', $val);
-	$dd_arr = array(strtotime("$dd 19:00"), strtotime("$dd 16:00"), strtotime("$dd 13:00"), strtotime("$dd 11:00"), strtotime("$dd 09:00"));
+	$dd_arr = array(strtotime("$dd 18:00"), strtotime("$dd 16:00"), strtotime("$dd 13:00"), strtotime("$dd 11:00"), strtotime("$dd 09:00"));
 	//print_array($dd_arr);
 	foreach ($dd_arr as $key => $item){
 		
@@ -198,11 +198,11 @@ function get_loc_shift_val($loc_id, $section, $dd){
 			//1400-1600
 		case 3:
 			$starttime = "16:00";
-			$endtime = "18:59";
+			$endtime = "17:59";
 			break;
 			//1601-1800
 		case 4:
-			$starttime = "19:00";
+			$starttime = "18:00";
 			$endtime = "22:00";
 			break;
 			//1801-2200
@@ -334,7 +334,7 @@ function calColspan($current_num, $duration, $ddTime){
 
 $date = $from;
 $end_date = $to;
-$sql = "SELECT id, room_name FROM $tbl_room WHERE location = '$location_code' ORDER BY sequence";
+$sql = "SELECT r.id, r.room_name, a.area_admin_email FROM $tbl_room r, $tbl_area a WHERE r.location = '$location_code' and r.area_id = a.id ORDER BY r.area_id, r.room_name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ";
 
 $res = sql_query($sql);
 
@@ -348,6 +348,7 @@ if (! $res) fatal_error(0, sql_error());
 			$tmp = array();
 	 		$tmp['id'] = $row[0];
 	 		$tmp['room_name'] = $row[1]; 
+	 		$tmp['area_admin_email'] = $row[2]; 
  			array_push($data_ary, $tmp);
  			$aid[$i] =  $row[0];
 		}
@@ -368,8 +369,8 @@ if (! $res) fatal_error(0, sql_error());
 	
 	foreach($data_ary as $key => $loc){
 		
-		cellValue($objSheet, $loc['room_name'], getNameFromNumber($col1).($row1+2), "", false, false, false);		
-		$loc_val[$key] = "<tr><td>".$loc['room_name']."</td>";	
+		cellValue($objSheet, $loc['room_name']." - (".$loc['area_admin_email'].")", getNameFromNumber($col1).($row1+2), "", false, false, false);		
+		$loc_val[$key] = "<tr><td>".$loc['room_name']."<BR>(".$loc['area_admin_email'].")"."</td>";	
 		$row1++;
 	}
 	

@@ -65,26 +65,30 @@ print_header($day, $month, $year, $area);
   </table>
   <br>
 
-  <strong>請點選時段 :-</strong>
+  <strong><!-- 請點選 -->時段 :</strong>
   <table width="400" border="0" cellpadding="5">
+    <!--
     <tr>
       <td width="30"><input name="mode" type="radio" value="day" checked></td>
       <td width="354">全日制時段(星期一至五9AM-7PM) </td>
     </tr> 
+    -->
     <tr>
-      <td><input name="mode" type="radio" value="night" checked></td>
-      <td>兼讀制時段(星期一至五7PM-10PM及星期六至日9AM-10PM)</td>
+      <!--  <td><input name="mode" type="radio" value="night" checked></td>-->
+      <td>兼讀制時段(星期一至五6PM-10PM及星期六至日9AM-10PM)</td>
     </tr>
+    <!--
     <tr>
       <td><input name="mode" type="radio" value="all"></td>
       <td>全日制 + 兼讀制時段 </td>
     </tr>
-    
+    -->
   </table>
 
   <br>
 
   <p>
+  	<input type="hidden" name="mode" value="night">
     <input type="submit" name="submit" value="送出">
     <input type="reset" name="reset" value="重設">
   </p>
