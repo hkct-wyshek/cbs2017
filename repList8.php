@@ -334,7 +334,7 @@ function calColspan($current_num, $duration, $ddTime){
 
 $date = $from;
 $end_date = $to;
-$sql = "SELECT r.id, r.room_name, a.area_admin_email FROM $tbl_room r, $tbl_area a WHERE r.location = '$location_code' and r.area_id = a.id ORDER BY r.area_id, r.room_name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ";
+$sql = "SELECT r.id, r.room_name, a.area_desc FROM $tbl_room r, $tbl_area a WHERE r.location = '$location_code' and r.area_id = a.id ORDER BY r.area_id, r.room_name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ";
 
 $res = sql_query($sql);
 
@@ -348,7 +348,7 @@ if (! $res) fatal_error(0, sql_error());
 			$tmp = array();
 	 		$tmp['id'] = $row[0];
 	 		$tmp['room_name'] = $row[1]; 
-	 		$tmp['area_admin_email'] = $row[2]; 
+	 		$tmp['area_desc'] = $row[2]; 
  			array_push($data_ary, $tmp);
  			$aid[$i] =  $row[0];
 		}
@@ -369,8 +369,8 @@ if (! $res) fatal_error(0, sql_error());
 	
 	foreach($data_ary as $key => $loc){
 		
-		cellValue($objSheet, $loc['room_name']." - (".$loc['area_admin_email'].")", getNameFromNumber($col1).($row1+2), "", false, false, false);		
-		$loc_val[$key] = "<tr><td>".$loc['room_name']."<BR>(".$loc['area_admin_email'].")"."</td>";	
+		cellValue($objSheet, $loc['room_name']." - (".$loc['area_desc'].")", getNameFromNumber($col1).($row1+2), "", false, false, false);		
+		$loc_val[$key] = "<tr><td>".$loc['room_name']."<BR>(".$loc['area_desc'].")"."</td>";	
 		$row1++;
 	}
 	
