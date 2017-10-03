@@ -232,6 +232,8 @@ function get_loc_shift_val($loc_id, $section, $dd){
 			$tmp['name'] = ($row[4] == $row[0] ? $row[0]." (".$tmp['starttime']."-".$tmp['endtime'].")": "[" . $row[4] . "] " . $row[0]." (".$tmp['starttime']."-".$tmp['endtime'].")");
 			$tmp['isUsedRoom'] = $row[3];
 			$tmp['type'] = $row[4];
+			$tmp['sdate'] = date('d',$row[1]);
+			$tmp['edate'] = date('d',$row[2]);
 		}
 	}
 	return $tmp;
@@ -471,9 +473,16 @@ if (! $res) fatal_error(0, sql_error());
 								
 								$currDate = date('Y-m-d', $strotimeDate);
 								$loc_data = get_loc_shift_val($loc['id'], $i, $currDate);
+								if ($loc_data['sdate'] != $loc_data['edate']){
+									$loc_data["endtime"] = "22:00";
+								}
 								$start_section = get_section_code(strtotime("$currDate ".$loc_data["starttime"]));
+								if ($loc_data["endtime"] == "09:00"){
+									
+								}
 								$new_end_time = explode(":", $loc_data["endtime"]);
 								$new_hour = $new_end_time[0];
+
 								
 								if ($new_end_time[1] == "00"){
 									$new_min= 59;
